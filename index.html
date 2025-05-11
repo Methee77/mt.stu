@@ -13,6 +13,7 @@
       background-color: #f2f2f2;
       font-family: 'Prompt', sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -38,7 +39,26 @@
 
     .update-text {
       font-size: 14px;
-      margin-top: 20px; /* เว้นห่างจากข้อความด้านบน */
+      margin-top: 20px;
+    }
+
+    .login-button {
+      margin-top: 30px;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-family: 'Prompt', sans-serif;
+      background-color: transparent;
+      border: 2px solid transparent;
+      color: #03a96b;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #03a96b;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -49,6 +69,9 @@
     <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
+
+  <!-- ปุ่มเข้าสู่ระบบ -->
+  <button class="login-button">เข้าสู่ระบบ</button>
 
 </body>
 </html>
