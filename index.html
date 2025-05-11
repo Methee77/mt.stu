@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f2f2f2;
-      font-family: 'Kanit', sans-serif; /* เปลี่ยนเป็น Kanit */
+      font-family: 'Kanit', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -46,12 +46,13 @@
       margin-top: 30px;
       padding: 10px 24px;
       font-size: 16px;
-      font-family: 'Kanit', sans-serif; /* เปลี่ยนเป็น Kanit */
+      font-family: 'Kanit', sans-serif;
       background-color: transparent;
       border: 2px solid transparent;
       color: #03a96b;
       cursor: pointer;
       transition: all 0.3s ease;
+      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     }
 
     .login-button:hover {
@@ -67,12 +68,11 @@
   <div class="welcome-box">
     <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
     <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
-    <p class="main-text">                 </p>
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
 
-  <!-- ปุ่มเข้าสู่ระบบ -->
-  <button class="login-button">เข้าสู่ระบบ</button> <!-- เปลี่ยนลิงก์ให้ชี้ไปที่ login.html -->
+  <!-- ลิงก์ไปหน้า login -->
+  <a href="login.html" class="login-button">เข้าสู่ระบบ</a>
 
 </body>
 </html>
