@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>เข้าสู่ระบบ - ระบบสารสนเทศ</title>
-  <!-- ฟอนต์ Kanit -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -25,6 +24,9 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .login-container h2 {
@@ -33,17 +35,25 @@
       color: #03a96b;
     }
 
-    .input-field {
+    form {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-field {
+      width: 80%;
       padding: 12px 15px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
+      text-align: center;
     }
 
     .login-button {
-      width: 100%;
+      width: 80%;
       padding: 12px;
       font-size: 16px;
       background-color: #03a96b;
@@ -80,20 +90,15 @@
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // ป้องกันการรีเฟรชหน้า
-
-      // ข้อมูลผู้ใช้และรหัสผ่านที่ถูกต้อง
+      event.preventDefault();
       const correctUsername = 'nisit206494';
       const correctPassword = '880x39^C';
 
-      // รับข้อมูลจากฟอร์ม
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
-      // ตรวจสอบข้อมูล
       if (username === correctUsername && password === correctPassword) {
         alert('เข้าสู่ระบบสำเร็จ!');
-        // คุณสามารถเปลี่ยนไปยังหน้าอื่นหลังจากเข้าสู่ระบบสำเร็จได้
       } else {
         document.getElementById('errorMessage').textContent = 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
       }
