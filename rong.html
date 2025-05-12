@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ระบบลงทะเบียนนิสิต</title>
+  <title>ระบบสารสนเทศ</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -97,17 +97,14 @@
 </head>
 <body>
   <div class="sidebar">
-    <h3>เมธ ใจสุขดี</h3>
+    <h3>เมธี ใจสุขดี</h3>
     <ul>
       <li>ข่าวสารนิสิต</li>
       <li>ตารางเรียน/ตารางสอบ</li>
-      <li>วิชาที่เปิดให้ลงทะเบียน</li>
-      <li>เลือกรูปแบบ/การเงิน</li>
-      <li>ลงทะเบียน/เพิ่ม-ถอน</li>
+      <li>เช็คชื่อเข้าเรียน</li>
       <li>ผลการลงทะเบียน</li>
       <li>ตรวจสอบผลการเรียน</li>
       <li>ประวัติการลงทะเบียน</li>
-      <li>สถิติ</li>
       <li>ประวัตินิสิต</li>
       <li>ค้นหาห้องสอบ</li>
     </ul>
@@ -116,14 +113,14 @@
   <div class="main">
     <div class="topbar">
       <div>
-        ระบบลงทะเบียนนิสิต มหาวิทยาลัยเกษตรศาสตร์
+        ระบบสารสนเทศ
       </div>
       <button class="logout-btn">ออกจากระบบ</button>
     </div>
 
     <div class="content">
       <h2>ยินดีต้อนรับเข้าสู่ระบบลงทะเบียนนิสิต</h2>
-      <p>วันจันทร์, 12 พฤษภาคม 2568 <span class="badge">ภาคฤดูร้อน 2568</span></p>
+      <p id="current-date"></p>
       <div class="course-box">
         <h3>ประกาศรายวิชา</h3>
         <p><strong>01403111-60 เคมีทั่วไป</strong></p>
@@ -136,5 +133,18 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // แสดงวันที่ปัจจุบัน + ภาค และเวลาเรียน
+    const dateElement = document.getElementById("current-date");
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("th-TH", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+    dateElement.innerHTML = `${formattedDate} <span class="badge">ภาคฤดูร้อน 2568</span> <br> เวลาเรียน 09:00 - 12:00 น.`;
+  </script>
 </body>
 </html>
