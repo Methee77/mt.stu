@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เข้าสู่ระบบ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เข้าสู่ระบบ - ระบบสารสนเทศ</title>
+  <!-- ฟอนต์ Kanit -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: 'Kanit', sans-serif;
-      background-color: #f2f2f2;
+      background: linear-gradient(to right, #03a96b, #02c39a);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
     }
 
     .login-container {
-      background-color: white;
-      padding: 20px;
+      background-color: #ffffff;
+      padding: 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      width: 300px;
-      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
     }
 
-    h2 {
-      margin-bottom: 20px;
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #03a96b;
     }
 
     .input-field {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
+      border-radius: 4px;
+      font-size: 16px;
     }
 
     .login-button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       background-color: #03a96b;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     .login-button:hover {
-      background-color: #02894a;
+      background-color: #028a5e;
     }
 
     .error-message {
       color: red;
       margin-top: 10px;
+      text-align: center;
       font-size: 14px;
     }
   </style>
@@ -66,8 +71,8 @@
   <div class="login-container">
     <h2>เข้าสู่ระบบ</h2>
     <form id="loginForm">
-      <input type="text" id="username" class="input-field" placeholder="ชื่อผู้ใช้" required>
-      <input type="password" id="password" class="input-field" placeholder="รหัสผ่าน" required>
+      <input type="text" id="username" class="input-field" placeholder="ชื่อผู้ใช้" required />
+      <input type="password" id="password" class="input-field" placeholder="รหัสผ่าน" required />
       <button type="submit" class="login-button">เข้าสู่ระบบ</button>
     </form>
     <div id="errorMessage" class="error-message"></div>
