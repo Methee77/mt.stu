@@ -10,11 +10,38 @@
       margin: 0;
       padding: 0;
       font-family: 'Kanit', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .header {
       background: linear-gradient(to right, #03a96b, #02c39a);
-      height: 100vh;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .main-wrapper {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .sidebar-left, .sidebar-right {
+      background-color: #ffffff;
+      width: 20%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      height: fit-content;
+    }
+
+    .sidebar-left h3,
+    .sidebar-right h3 {
+      color: #03a96b;
+      margin-bottom: 10px;
     }
 
     .login-container {
@@ -27,6 +54,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0 auto;
     }
 
     .login-container h2 {
@@ -74,19 +102,53 @@
       text-align: center;
       font-size: 14px;
     }
+
+    @media (max-width: 768px) {
+      .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar-left, .sidebar-right {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="login-container">
-    <h2>เข้าสู่ระบบ</h2>
-    <!-- เมื่อผู้ใช้กรอกข้อมูลและคลิกเข้าสู่ระบบ, ระบบจะนำไปที่หน้า rong.html -->
-    <form action="rong.html" method="GET">
-      <input type="text" id="username" class="input-field" placeholder="ชื่อผู้ใช้" required />
-      <input type="password" id="password" class="input-field" placeholder="รหัสผ่าน" required />
-      <button type="submit" class="login-button">เข้าสู่ระบบ</button>
-    </form>
-    <div id="errorMessage" class="error-message"></div>
+  <div class="header">
+    ระบบสารสนเทศนิสิต
+  </div>
+
+  <div class="main-wrapper">
+    <div class="sidebar-left">
+      <h3>ปฏิทินการศึกษา</h3>
+      <ul>
+        <li>เริ่มภาคฤดูร้อน: 13 พ.ค. 68</li>
+        <li>สิ้นสุด: 2 ส.ค. 68</li>
+        <li>หยุดกลางภาค: 15 มิ.ย. 68</li>
+      </ul>
+    </div>
+
+    <div class="login-container">
+      <h2>เข้าสู่ระบบ</h2>
+      <form id="loginForm">
+        <input type="text" id="username" class="input-field" placeholder="ชื่อผู้ใช้" required />
+        <input type="password" id="password" class="input-field" placeholder="รหัสผ่าน" required />
+        <button type="submit" class="login-button">เข้าสู่ระบบ</button>
+      </form>
+      <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <div class="sidebar-right">
+      <h3>ปฏิทินรายวิชา</h3>
+      <ul>
+        <li>สมัครรายวิชา: 14-15 พ.ค.</li>
+        <li>เปลี่ยนวิชา: 20 พ.ค.</li>
+        <li>ถอนรายวิชา: 10 ก.ค.</li>
+      </ul>
+    </div>
   </div>
 
   <script>
@@ -100,6 +162,7 @@
 
       if (username === correctUsername && password === correctPassword) {
         alert('เข้าสู่ระบบสำเร็จ!');
+        window.location.href = "rong.html";
       } else {
         document.getElementById('errorMessage').textContent = 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
       }
