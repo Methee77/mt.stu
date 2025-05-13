@@ -42,24 +42,32 @@
       margin-top: 20px;
     }
 
-    .login-button {
-      margin-top: 30px;
-      padding: 10px 24px;
-      font-size: 16px;
-      font-family: 'Kanit', sans-serif;
+    .home-menu {
+      margin-top: 20px;
+      padding: 10px;
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 2px solid #03a96b;
       color: #03a96b;
+      border-radius: 4px;
       cursor: pointer;
       transition: all 0.3s ease;
-      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     }
 
-    .login-button:hover {
+    .home-menu:hover {
       background-color: #03a96b;
       color: white;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transform: translateY(-2px);
+    }
+
+    .dark-mode {
+      background-color: #333;
+      color: white;
+    }
+
+    .light-mode {
+      background-color: #f2f2f2;
+      color: #333;
     }
   </style>
 </head>
@@ -71,5 +79,28 @@
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
 
+  <!-- ปุ่มสำหรับสลับโหมด -->
+  <div class="home-menu" id="homeButton">
+    หน้าหลัก
+  </div>
+
+  <script>
+    // สลับโหมดระหว่าง light mode และ dark mode
+    let homeButton = document.getElementById('homeButton');
+
+    homeButton.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        homeButton.style.borderColor = "#fff";  // สีขอบสำหรับโหมดมืด
+        homeButton.style.color = "#fff";        // เปลี่ยนสีตัวอักษรให้เข้ากับโหมดมืด
+      } else {
+        homeButton.style.borderColor = "#03a96b"; // สีขอบสำหรับโหมดสว่าง
+        homeButton.style.color = "#03a96b";        // สีตัวอักษรสำหรับโหมดสว่าง
+      }
+    });
+
+  </script>
+
 </body>
-</html>  จากโค้ดนี้ช่วยเพิ่มเมนูสลับโหมดกลางคืน/กลางวัน
+</html>
