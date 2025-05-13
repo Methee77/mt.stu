@@ -42,7 +42,6 @@
       text-align: center;
       transition: background-color 0.3s, color 0.3s;
       margin-top: 40px;
-      position: relative;
     }
 
     body.dark-mode .welcome-box {
@@ -57,17 +56,6 @@
     .update-text {
       font-size: 14px;
       margin-top: 20px;
-    }
-
-    .current-date {
-      position: absolute;
-      top: 10px;
-      font-size: 18px;
-      font-weight: 600;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      color: white;
     }
 
     .toggle-button {
@@ -236,7 +224,6 @@
 
   <div class="container">
     <div class="welcome-box">
-      <p class="current-date" id="current-date"></p>
       <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
       <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
       <p class="update-text">updated 12 พฤษภาคม 2568</p>
@@ -245,11 +232,11 @@
     <div class="summary-boxes">
       <div class="summary-box">
         <div class="summary-title">หน่วยกิต</div>
-        <div class="summary-value">40</div>
+        <div class="summary-value">-div>
       </div>
       <div class="summary-box">
         <div class="summary-title">เกรดเฉลี่ย</div>
-        <div class="summary-value">2.66</div>
+        <div class="summary-value">-</div>
       </div>
     </div>
 
@@ -264,9 +251,9 @@
         <div class="course-credit">4 หน่วยกิต</div>
         <div class="course-title">
           <div style="font-weight: bold;">เคมีทั่วไป</div>
-          <div style="font-size: 14px;">General Chemistry</div>
+          <div style="font-size: 14px;">General C</div>
         </div>
-        <div class="grade">A</div>
+        <div class="grade">-</div>
       </div>
     </div>
   </div>
@@ -277,18 +264,6 @@
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
     }
-
-    function updateCurrentDate() {
-      const today = new Date();
-      const day = today.getDate();
-      const month = today.getMonth() + 1; // เดือนเริ่มต้นจาก 0
-      const year = today.getFullYear() + 543; // เพิ่มปี พ.ศ.
-      const monthNames = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
-      const currentDate = `${day} ${monthNames[month - 1]} ${year}`;
-      document.getElementById('current-date').textContent = currentDate;
-    }
-
-    updateCurrentDate(); // เรียกฟังก์ชันเพื่ออัพเดทวันที่
   </script>
 </body>
 </html>
