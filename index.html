@@ -92,6 +92,7 @@
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.3s ease;
+      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     }
 
     .home-menu:hover {
@@ -110,6 +111,18 @@
       background-color: white;
       color: #121212;
     }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+
+    body.dark-mode .footer {
+      color: #bbb;
+    }
   </style>
 </head>
 <body>
@@ -122,9 +135,16 @@
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
 
-  <!-- ปุ่มเข้าสู่หน้าหลัก -->
-  <div class="home-menu" id="homeButton">
-    เข้าสู่หน้าหลัก
+  <!-- ลิงก์ไปที่หน้า rong.html -->
+  <a href="rong.html">
+    <div class="home-menu">
+      เข้าสู่หน้าหลัก
+    </div>
+  </a>
+
+  <!-- ข้อความลิขสิทธิ์ -->
+  <div class="footer">
+    © 2568 Methee Jaisukdee | All Rights Reserved
   </div>
 
   <script>
