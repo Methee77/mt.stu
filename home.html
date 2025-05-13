@@ -56,11 +56,11 @@
     .content-wrapper {
       flex: 1;
       display: flex;
-      justify-content: center;
+      flex-direction: column; /* เปลี่ยนจาก row เป็น column */
+      justify-content: flex-start;
       align-items: center;
       padding: 20px;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 20px; /* เพิ่มระยะห่างระหว่างกล่อง */
     }
 
     .side-box {
@@ -127,14 +127,16 @@
   <button class="toggle-button" onclick="toggleMode()">เปลี่ยนโหมด</button>
 
   <div class="content-wrapper">
-    <div class="side-box">
-      ปฏิทินการศึกษา<br>ภาคฤดูร้อน พ.ศ. 2568
-    </div>
-
+    <!-- กรอบสีเขียวอยู่ด้านบน -->
     <div class="welcome-box">
       <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
       <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
       <p class="update-text">updated 12 พฤษภาคม 2568</p>
+    </div>
+
+    <!-- กรอบสีขาวอยู่ด้านล่าง -->
+    <div class="side-box">
+      ปฏิทินการศึกษา<br>ภาคฤดูร้อน พ.ศ. 2568
     </div>
 
     <div class="side-box">
@@ -154,4 +156,3 @@
 
 </body>
 </html>
-
