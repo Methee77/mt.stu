@@ -1,150 +1,87 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ระบบสารสนเทศ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบปิดปรับปรุง</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
       padding: 0;
-    }
-
-    body {
       font-family: 'Kanit', sans-serif;
-      background-color: #f4f4f4;
       display: flex;
-      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8d7da;
+      color: #721c24;
+      text-align: center;
     }
 
-    .sidebar {
-      background-color: #2f3e4d;
-      color: white;
-      width: 250px;
-      padding: 20px;
+    .maintenance-box {
+      background-color: #f5c6cb;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .sidebar h3 {
+    h1 {
+      font-size: 36px;
       margin-bottom: 20px;
     }
 
-    .sidebar ul {
-      list-style: none;
+    .countdown {
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    .sidebar ul li {
-      margin: 15px 0;
-    }
-
-    .sidebar ul li:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .topbar {
-      background-color: #03a96b;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .content {
-      padding: 30px;
-    }
-
-    .course-box {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: #03a96b;
-      color: white;
-      border-radius: 20px;
-      padding: 3px 10px;
-      font-size: 0.8rem;
-      margin-left: 10px;
-    }
-
-    .logout-btn {
-      background: transparent;
-      color: white;
-      border: 1px solid white;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .logout-btn:hover {
-      background-color: white;
-      color: #03a96b;
+    footer {
+      position: absolute;
+      bottom: 16px;
+      font-size: 14px;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h3>เมธี ใจสุขดี</h3>
-    <ul>
-      <li>ข่าวสารนิสิต</li>
-      <li>ตารางเรียน/ตารางสอบ</li>
-      <li>เช็คชื่อเข้าเรียน</li>
-      <li>ผลการลงทะเบียน</li>
-      <li>ตรวจสอบผลการเรียน</li>
-      <li>ประวัติการลงทะเบียน</li>
-      <li>ประวัตินิสิต</li>
-      <li>ค้นหาห้องสอบ</li>
-    </ul>
+
+  <div class="maintenance-box">
+    <h1>ขออภัย ระบบอยู่ระหว่างการปิดปรับปรุง</h1>
+    <p>ระบบจะกลับมาใช้งานได้ในวันที่ <strong>16 พฤษภาคม 2568 เวลา 09:00 น.</strong></p>
+    <p class="countdown" id="countdown">กำลังโหลดเวลา...</p>
   </div>
 
-  <div class="main">
-    <div class="topbar">
-      <div>
-        ระบบสารสนเทศ
-      </div>
-      <button class="logout-btn">ออกจากระบบ</button>
-    </div>
-
-    <div class="content">
-      <h2>ยินดีต้อนรับเข้าสู่ระบบลงทะเบียนนิสิต</h2>
-      <p id="current-date"></p>
-      <div class="course-box">
-        <h3>ประกาศรายวิชา</h3>
-        <p><strong>01403111-60 เคมีทั่วไป</strong></p>
-        <p>หมู่เรียน <span class="badge">700 บรรยาย</span></p>
-        <p>เงื่อนไขการเข้าเรียน</p>
-        <small>
-          ล่าสุดเมื่อวันจันทร์, 21 เมษายน 2568<br />
-          โดย นายปิติ ตรีสกุล
-        </small>
-      </div>
-    </div>
-  </div>
+  <footer>
+    © 2025 Methee Jaisukdee. สงวนลิขสิทธิ์.
+  </footer>
 
   <script>
-    // แสดงวันที่ปัจจุบัน + ภาค และเวลาเรียน
-    const dateElement = document.getElementById("current-date");
-    const today = new Date();
-    const formattedDate = today.toLocaleDateString("th-TH", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
-    dateElement.innerHTML = `${formattedDate} <span class="badge">ภาคฤดูร้อน 2568</span> <br> เวลาเรียน 09:00 - 12:00 น.`;
+    // กำหนดวัน-เวลาสิ้นสุด
+    const targetDate = new Date("2025-05-16T09:00:00+07:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "ระบบพร้อมให้บริการแล้ว";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
+    }
+
+    updateCountdown(); // อัปเดตทันที
+    setInterval(updateCountdown, 1000); // อัปเดตทุกวินาที
   </script>
+
 </body>
 </html>
