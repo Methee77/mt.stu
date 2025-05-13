@@ -38,11 +38,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
       transition: background-color 0.3s, color 0.3s;
       margin-top: 40px;
       position: relative;
+      /* เอากรอบเงาสีดำออก */
+      box-shadow: none;
     }
 
     body.dark-mode .welcome-box {
@@ -255,18 +256,18 @@
 
     <div class="course-section">
       <div class="term-header">
-        <span class="term-label">ภาคปลาย 2567</span>
-        <div class="term-summary">หน่วยกิต <span>22</span> เกรดเฉลี่ย <span>3.25</span></div>
+        <span class="term-label">ภาคฤดูร้อน 2568</span>
+        <div class="term-summary">หน่วยกิต <span>-</span> เกรดเฉลี่ย <span>-</span></div>
       </div>
 
       <div class="course-box">
-        <div class="course-id">93751111</div>
-        <div class="course-credit">3 หน่วยกิต</div>
+        <div class="course-id">01403111</div>
+        <div class="course-credit">4 หน่วยกิต</div>
         <div class="course-title">
-          <div style="font-weight: bold;">มนุษย์กับสิ่งแวดล้อม</div>
-          <div style="font-size: 14px;">Man and Environment</div>
+          <div style="font-weight: bold;">เคมีทั่วไป</div>
+          <div style="font-size: 14px;">General Chemistry</div>
         </div>
-        <div class="grade">A</div>
+        <div class="grade">-</div>
       </div>
     </div>
   </div>
@@ -277,7 +278,6 @@
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
     }
-    
   </script>
 </body>
 </html>
