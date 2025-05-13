@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Methee Jaisukdee</title>
-  <!-- ฟอนต์ Kanit -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,9 +12,7 @@
       font-family: 'Kanit', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
       background-color: #f2f2f2;
       transition: background-color 0.3s, color 0.3s;
     }
@@ -37,6 +34,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
       transition: background-color 0.3s, color 0.3s;
+      margin-top: 40px;
     }
 
     body.dark-mode .welcome-box {
@@ -83,38 +81,8 @@
       color: #121212;
     }
 
-    .home-menu {
-      margin-top: 30px;
-      padding: 12px 24px;
-      background-color: transparent;
-      border: 2px solid #03a96b;
-      color: #03a96b;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-    }
-
-    .home-menu:hover {
-      background-color: #03a96b;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transform: translateY(-2px);
-    }
-
-    body.dark-mode .home-menu {
-      border-color: white;
-      color: white;
-    }
-
-    body.dark-mode .home-menu:hover {
-      background-color: white;
-      color: #121212;
-    }
-
     .footer {
-      position: absolute;
-      bottom: 10px;
+      margin: 20px 0;
       font-size: 12px;
       color: #888;
       text-align: center;
@@ -123,10 +91,98 @@
     body.dark-mode .footer {
       color: #bbb;
     }
+
+    .summary-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .summary-box {
+      background-color: #10b981;
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+      width: 250px;
+    }
+
+    .summary-value {
+      background-color: white;
+      color: #10b981;
+      font-size: 32px;
+      padding: 16px 0;
+      border: 1px solid #e0e0e0;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .term-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 17.16cm;
+      margin-top: 30px;
+    }
+
+    .term-label {
+      background-color: #63c5da;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .term-summary {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .term-summary span {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .course-box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 17.16cm;
+      margin-bottom: 40px;
+    }
+
+    .course-info {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .course-title {
+      font-weight: bold;
+    }
+
+    .course-title small {
+      display: block;
+      font-weight: normal;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .grade {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3f5a;
+      min-width: 40px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-
   <button class="toggle-button" onclick="toggleMode()">เปลี่ยนโหมด</button>
 
   <div class="welcome-box">
@@ -135,7 +191,37 @@
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
 
-  <!-- ข้อความลิขสิทธิ์ -->
+  <!-- ส่วนข้อมูลผลการเรียน -->
+  <div class="summary-boxes">
+    <div>
+      <div class="summary-box">หน่วยกิตสะสม</div>
+      <div class="summary-value">40</div>
+    </div>
+    <div>
+      <div class="summary-box">เกรดเฉลี่ยสะสม</div>
+      <div class="summary-value">2.66</div>
+    </div>
+  </div>
+
+  <div class="term-header">
+    <div class="term-label">ภาคปลาย 2567</div>
+    <div class="term-summary">
+      หน่วยกิต <span>22</span> เกรดเฉลี่ย <span>3.25</span>
+    </div>
+  </div>
+
+  <div class="course-box">
+    <div class="course-info">
+      <div>93751111</div>
+      <div>3 หน่วยกิต</div>
+      <div class="course-title">
+        มนุษย์กับสิ่งแวดล้อม
+        <small>Man and Environment</small>
+      </div>
+    </div>
+    <div class="grade">A</div>
+  </div>
+
   <div class="footer">
     © 2568 Methee Jaisukdee | All Rights Reserved
   </div>
@@ -145,6 +231,5 @@
       document.body.classList.toggle('dark-mode');
     }
   </script>
-
 </body>
 </html>
