@@ -30,20 +30,18 @@
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
-      color: #B2BB1E; /* เปลี่ยนสีหัวข้อ */
     }
 
     .countdown {
       font-size: 24px;
       font-weight: bold;
-      color: #B2BB1E; /* เปลี่ยนสีข้อความนับถอยหลัง */
     }
 
     footer {
       position: absolute;
       bottom: 16px;
       font-size: 14px;
-      color: #B2BB1E; /* เปลี่ยนสีลิขสิทธิ์ */
+      color: #999;
     }
   </style>
 </head>
@@ -78,7 +76,7 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("countdown").innerHTML =
-        `${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
+        ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที;
     }
 
     updateCountdown(); // อัปเดตทันที
