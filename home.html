@@ -13,7 +13,9 @@
       font-family: 'Kanit', sans-serif;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       background-color: #f2f2f2;
       transition: background-color 0.3s, color 0.3s;
     }
@@ -21,6 +23,34 @@
     body.dark-mode {
       background-color: #121212;
       color: white;
+    }
+
+    .welcome-box {
+      background-color: #03a96b;
+      color: white;
+      width: 17.16cm;
+      height: 6.27cm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode .welcome-box {
+      background-color: #026b4c;
+    }
+
+    .main-text {
+      font-size: 36px;
+      margin: 5px 0;
+    }
+
+    .update-text {
+      font-size: 14px;
+      margin-top: 20px;
     }
 
     .toggle-button {
@@ -53,79 +83,45 @@
       color: #121212;
     }
 
-    .content-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      gap: 20px;
-      flex-wrap: wrap;
+    .home-menu {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: transparent;
+      border: 2px solid #03a96b;
+      color: #03a96b;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     }
 
-    .welcome-box {
+    .home-menu:hover {
       background-color: #03a96b;
       color: white;
-      width: 17.16cm;
-      height: 6.27cm;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      transition: background-color 0.3s, color 0.3s;
+      transform: translateY(-2px);
     }
 
-    body.dark-mode .welcome-box {
-      background-color: #026b4c;
-    }
-
-    .side-box {
-      width: 17.16cm;
-      height: 6.27cm;
-      background-color: #03a96b;
+    body.dark-mode .home-menu {
+      border-color: white;
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+
+    body.dark-mode .home-menu:hover {
+      background-color: white;
+      color: #121212;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #888;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, color 0.3s;
-      padding: 10px;
     }
 
-    body.dark-mode .side-box {
-      background-color: #026b4c;
-    }
-
-    .main-text {
-      font-size: 36px;
-      margin: 5px 0;
-    }
-
-    .update-text {
-      font-size: 14px;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    body.dark-mode footer {
-      color: #aaa;
-    }
-
-    /* เพิ่มคลาสใหม่เพื่อจัดตำแหน่งกรอบสีเขียว */
-    .boxes-container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 20px;
+    body.dark-mode .footer {
+      color: #bbb;
     }
   </style>
 </head>
@@ -133,29 +129,16 @@
 
   <button class="toggle-button" onclick="toggleMode()">เปลี่ยนโหมด</button>
 
-  <div class="content-wrapper">
-    <!-- กรอบสีเขียวอยู่ด้านบน -->
-    <div class="welcome-box">
-      <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
-      <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
-      <p class="update-text">updated 12 พฤษภาคม 2568</p>
-    </div>
+  <div class="welcome-box">
+    <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
+    <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
+    <p class="update-text">updated 12 พฤษภาคม 2568</p>
   </div>
 
-  <!-- กรอบสีเขียวอยู่ข้างล่างกรอบสีเขียว -->
-  <div class="boxes-container">
-    <div class="side-box">
-      ปฏิทินการศึกษา<br>ภาคฤดูร้อน พ.ศ. 2568
-    </div>
-
-    <div class="side-box">
-      ปฏิทินรายวิชา
-    </div>
+  <!-- ข้อความลิขสิทธิ์ -->
+  <div class="footer">
+    © 2568 Methee Jaisukdee | All Rights Reserved
   </div>
-
-  <footer>
-    © 2025 Methee Jaisukdee. สงวนลิขสิทธิ์.
-  </footer>
 
   <script>
     function toggleMode() {
