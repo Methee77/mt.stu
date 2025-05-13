@@ -82,6 +82,34 @@
       background-color: white;
       color: #121212;
     }
+
+    .home-menu {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: transparent;
+      border: 2px solid #03a96b;
+      color: #03a96b;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .home-menu:hover {
+      background-color: #03a96b;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    body.dark-mode .home-menu {
+      border-color: white;
+      color: white;
+    }
+
+    body.dark-mode .home-menu:hover {
+      background-color: white;
+      color: #121212;
+    }
   </style>
 </head>
 <body>
@@ -92,6 +120,11 @@
     <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
     <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
     <p class="update-text">updated 12 พฤษภาคม 2568</p>
+  </div>
+
+  <!-- ปุ่มเข้าสู่หน้าหลัก -->
+  <div class="home-menu" id="homeButton">
+    เข้าสู่หน้าหลัก
   </div>
 
   <script>
