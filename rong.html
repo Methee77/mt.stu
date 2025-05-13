@@ -67,6 +67,9 @@
 
       if (distance <= 0) {
         document.getElementById("countdown").innerHTML = "ระบบพร้อมให้บริการแล้ว";
+
+        // เมื่อเวลาหมด ให้เปลี่ยนหน้าไปที่ home.html
+        window.location.href = "home.html"; // เปลี่ยนเส้นทางไปหน้า home.html
         return;
       }
 
@@ -76,7 +79,7 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("countdown").innerHTML =
-        ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที;
+        `${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
     }
 
     updateCountdown(); // อัปเดตทันที
@@ -85,3 +88,4 @@
 
 </body>
 </html>
+
