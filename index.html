@@ -23,35 +23,6 @@
       color: white;
     }
 
-    .welcome-box {
-      background-color: #03a96b;
-      color: white;
-      width: 17.16cm;
-      height: 6.27cm;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      transition: background-color 0.3s, color 0.3s;
-      margin: auto;
-    }
-
-    body.dark-mode .welcome-box {
-      background-color: #026b4c;
-    }
-
-    .main-text {
-      font-size: 36px;
-      margin: 5px 0;
-    }
-
-    .update-text {
-      font-size: 14px;
-      margin-top: 20px;
-    }
-
     .toggle-button {
       position: absolute;
       top: 20px;
@@ -82,6 +53,63 @@
       color: #121212;
     }
 
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .side-box {
+      width: 200px;
+      height: 6.27cm;
+      background-color: #ffffff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+      padding: 10px;
+    }
+
+    body.dark-mode .side-box {
+      background-color: #1f1f1f;
+      color: white;
+    }
+
+    .welcome-box {
+      background-color: #03a96b;
+      color: white;
+      width: 17.16cm;
+      height: 6.27cm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode .welcome-box {
+      background-color: #026b4c;
+    }
+
+    .main-text {
+      font-size: 36px;
+      margin: 5px 0;
+    }
+
+    .update-text {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 16px;
@@ -98,10 +126,20 @@
 
   <button class="toggle-button" onclick="toggleMode()">เปลี่ยนโหมด</button>
 
-  <div class="welcome-box">
-    <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
-    <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
-    <p class="update-text">updated 12 พฤษภาคม 2568</p>
+  <div class="content-wrapper">
+    <div class="side-box">
+      ปฏิทินการศึกษา<br>ภาคฤดูร้อน พ.ศ. 2568
+    </div>
+
+    <div class="welcome-box">
+      <p class="main-text">ยินดีต้อนรับสู่ระบบสารสนเทศ</p>
+      <p class="main-text">ภาคฤดูร้อน พ.ศ. 2568</p>
+      <p class="update-text">updated 12 พฤษภาคม 2568</p>
+    </div>
+
+    <div class="side-box">
+      ปฏิทินรายวิชา
+    </div>
   </div>
 
   <footer>
