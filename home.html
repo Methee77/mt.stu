@@ -297,36 +297,41 @@
       </div>
     </div>
 
-    <!-- ตารางการจัดการเรียนรู้ -->
     <div class="course-section">
-      <div class="term-header">
-        <span class="term-label">ตารางการจัดการเรียนรู้</span>
-        <div class="term-summary">เรียนวันจันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
-      </div>
-      <div style="overflow-x: auto;">
-        <table>
-          <thead>
-            <tr>
-              <th>วันที่เรียน</th>
-              <th>เนื้อหา</th>
-              <th>จำนวนชั่วโมง</th>
-              <th>ผู้สอน</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- แถวว่างสำหรับกรอกข้อมูล -->
-            " + Array.from({length: 15}).map(() => `
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>`).join('') + "
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <div class="term-header">
+    <span class="term-label">ตารางการจัดการเรียนรู้</span>
+    <div class="term-summary">เรียน จันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
   </div>
+
+  <table style="width: 100%; border-collapse: collapse; background-color: white; border-radius: 12px; overflow: hidden;">
+    <thead style="background-color: #03a96b; color: white;">
+      <tr>
+        <th style="padding: 10px; border: 1px solid #ccc;">วันที่เรียน</th>
+        <th style="padding: 10px; border: 1px solid #ccc;">เนื้อหา</th>
+        <th style="padding: 10px; border: 1px solid #ccc;">จำนวนชั่วโมง</th>
+        <th style="padding: 10px; border: 1px solid #ccc;">ผู้สอน</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- สร้าง 15 แถวว่าง -->
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
+    </tbody>
+  </table>
+</div>
 
   <div class="footer">© 2568 Methee Jaisukdee | All Rights Reserved</div>
 
