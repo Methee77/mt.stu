@@ -274,40 +274,6 @@
     body.dark-mode th {
       border: 1px solid #555;
     }
-
-    /* ✅ กล่องประชาสัมพันธ์ */
-    .announcement-box {
-      margin-top: 30px;
-      padding: 20px;
-      width: 600px;
-      background-color: #fffef8;
-      color: #333;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    }
-
-    .announcement-title {
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #e65100;
-    }
-
-    .announcement-content {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    body.dark-mode .announcement-box {
-      background-color: #2c1f00;
-      color: #f5d37f;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-    }
-
-    body.dark-mode .announcement-title {
-      color: #ffb300;
-    }
   </style>
 </head>
 <body>
@@ -325,7 +291,7 @@
       เหลือเวลาอีก: <span id="countdown">กำลังโหลด...</span> ก่อนสอบปลายภาค 01403111-60
     </div>
 
-    <!-- ✅ กล่องประชาสัมพันธ์ -->
+        <!-- ✅ กล่องประชาสัมพันธ์ -->
     <div class="announcement-box">
       <div class="announcement-title">📢 ประชาสัมพันธ์รายวิชา</div>
       <div class="announcement-content">
@@ -341,29 +307,96 @@
     <script>
       function toggleMode() {
         document.body.classList.toggle('dark-mode');
+    <div class="summary-boxes">
+      <div class="summary-box">
+        <div class="summary-title">หน่วยกิตสะสม</div>
+        <div class="summary-value">40</div>
+      </div>
+      <div class="summary-box">
+        <div class="summary-title">เกรดเฉลี่ยสะสม</div>
+        <div class="summary-value">2.66</div>
+      </div>
+    </div>
+
+    <div class="course-section">
+      <div class="term-header">
+        <span class="term-label">ภาคฤดูร้อน 2568</span>
+        <div class="term-summary">หน่วยกิต <span>-</span> เกรดเฉลี่ย <span>-</span></div>
+      </div>
+      <div class="course-box">
+        <div class="course-id">01403111</div>
+        <div class="course-credit">4 หน่วยกิต</div>
+        <div class="course-title">
+          <div style="font-weight: bold;">เคมีทั่วไป</div>
+          <div style="font-size: 14px;">General Chemistry</div>
+        </div>
+        <div class="grade">N</div>
+      </div>
+    </div>
+
+    <div class="course-section">
+      <div class="term-header">
+        <span class="term-label">ตารางการจัดการเรียนรู้</span>
+        <div class="term-summary">เรียน จันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>วันที่เรียน</th>
+            <th>เนื้อหา</th>
+            <th>จำนวนชั่วโมง</th>
+            <th>ผู้สอน</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>21 เม.ย. 68</td><td>แนะนำรายวิชา บทนำ</td><td>2</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>22 เม.ย. 68 - 23 เม.ย. 68</td><td>อะตอมและระบบพีริออดิก</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>24 เม.ย. 68 - 25 เม.ย. 68</td><td>พันธะเคมี</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>28 เม.ย. 68 - 30 เม.ย. 68</td><td>ปฏิกิริยาเคมี</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>1 พ.ค. 68 - 2 พ.ค. 68</td><td>แก๊ส</td><td>4</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>5 พ.ค. 68 - 6 พ.ค. 68</td><td>ของแข็ง</td><td>4</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>7 พ.ค. 68</td><td>สำรองและทบทวน</td><td>3</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>8 พ.ค. 68</td><td>ของเหลว</td><td>2</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>9 พ.ค. 68 - 13 พ.ค. 68</td><td>สารละลาย</td><td>4</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>14 พ.ค. 68 - 15 พ.ค. 68</td><td>อุณหพลศาสตร์เบื้องต้น</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>16 พ.ค. 68 - 19 พ.ค. 68</td><td>จลนศาสตร์เคมี</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>20 พ.ค. 68</td><td>สมดุลเคมี</td><td>2</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>21 พ.ค. 68 - 22 พ.ค. 68</td><td>สมดุลไอออน</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>23 พ.ค. 68 - 27 พ.ค. 68</td><td>เคมีไฟฟ้า</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
+          <tr><td>28 พ.ค. 68</td><td>สำรองและทบทวน</td><td>3</td><td>รศ.ดร.กมลทิพย์</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">© 2568 Methee Jaisukdee | All Rights Reserved</div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function updateCountdown() {
+      const countdownElement = document.getElementById("countdown");
+      const examDate = new Date("2025-05-30T09:00:00");
+      const now = new Date();
+      const diff = examDate - now;
+
+      if (diff <= 0) {
+        countdownElement.innerText = "ถึงเวลาเข้าสอบแล้ว!";
+        return;
       }
 
-      function updateCountdown() {
-        const countdownElement = document.getElementById("countdown");
-        const examDate = new Date("2025-05-30T09:00:00");
-        const now = new Date();
-        const diff = examDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
 
-        if (diff <= 0) {
-          countdownElement.innerText = "ถึงเวลาเข้าสอบแล้ว!";
-          return;
-        }
+      countdownElement.innerText = ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที;
+    }
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-
-        countdownElement.innerText = `${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
-      }
-
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
-    </script>
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
-</html>
