@@ -239,6 +239,20 @@
     body.dark-mode .grade {
       color: #50fa7b;
     }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    thead {
+      background-color: #03a96b;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -252,7 +266,6 @@
       <p class="update-text">updated 12 พฤษภาคม 2568</p>
     </div>
 
-    <!-- นับถอยหลัง -->
     <div class="countdown-box">
       เหลือเวลาอีก: <span id="countdown">กำลังโหลด...</span> ก่อนสอบปลายภาค 01403111-60
     </div>
@@ -273,7 +286,6 @@
         <span class="term-label">ภาคฤดูร้อน 2568</span>
         <div class="term-summary">หน่วยกิต <span>-</span> เกรดเฉลี่ย <span>-</span></div>
       </div>
-
       <div class="course-box">
         <div class="course-id">01403111</div>
         <div class="course-credit">4 หน่วยกิต</div>
@@ -282,6 +294,36 @@
           <div style="font-size: 14px;">General Chemistry</div>
         </div>
         <div class="grade">-</div>
+      </div>
+    </div>
+
+    <!-- ตารางการจัดการเรียนรู้ -->
+    <div class="course-section">
+      <div class="term-header">
+        <span class="term-label">ตารางการจัดการเรียนรู้</span>
+        <div class="term-summary">เรียนวันจันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
+      </div>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>วันที่เรียน</th>
+              <th>เนื้อหา</th>
+              <th>จำนวนชั่วโมง</th>
+              <th>ผู้สอน</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- แถวว่างสำหรับกรอกข้อมูล -->
+            " + Array.from({length: 15}).map(() => `
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>`).join('') + "
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
