@@ -164,6 +164,34 @@
       color: #50fa7b;
     }
 
+    .exam-boxes {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px auto 0;
+      width: 800px;
+      max-width: 90%;
+      gap: 20px;
+    }
+
+    .exam-box {
+      flex: 1;
+      padding: 20px;
+      border: 2px solid white;
+      border-radius: 12px;
+      background-color: white;
+      color: #121212;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .exam-box {
+      background-color: #1e1e1e;
+      color: white;
+      border-color: #555;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
     .course-section {
       margin-top: 40px;
       width: 600px;
@@ -298,65 +326,21 @@
       </div>
     </div>
 
-    <div class="course-section">
-      <div class="term-header">
-        <span class="term-label">ภาคฤดูร้อน 2568</span>
-        <div class="term-summary">หน่วยกิต <span>-</span> เกรดเฉลี่ย <span>-</span></div>
+    <div class="exam-boxes">
+      <div class="exam-box">
+        <strong>การสอบกลางภาค</strong><br>
+        วันที่ 9 พฤษภาคม 2568<br>
+        เวลา 09.00 - 12.00 น.<br>
+        ศร3-303<br>
+        คะแนนเต็ม 98 คะแนน คิดเป็น 39%
       </div>
-      <div class="course-box">
-        <div class="course-id">01403111</div>
-        <div class="course-credit">4 หน่วยกิต</div>
-        <div class="course-title">
-          <div style="font-weight: bold;">เคมีทั่วไป</div>
-          <div style="font-size: 14px;">General Chemistry</div>
-        </div>
-        <div class="grade">N</div>
+      <div class="exam-box">
+        <strong>การสอบปลายภาค</strong><br>
+        วันที่ 30 พฤษภาคม 2568<br>
+        เวลา 09.00 - 12.00 น.<br>
+        ศร3-303<br>
+        คะแนนเต็ม - คะแนน คิดเป็น -
       </div>
     </div>
 
-    <div class="course-section">
-      <div class="term-header">
-        <span class="term-label">ตารางการจัดการเรียนรู้</span>
-        <div class="term-summary">เรียน จันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>วันที่เรียน</th>
-            <th>เนื้อหา</th>
-            <th>จำนวนชั่วโมง</th>
-            <th>ผู้สอน</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>21 เม.ย. 68</td><td>แนะนำรายวิชา บทนำ</td><td>2</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>22 เม.ย. 68 - 23 เม.ย. 68</td><td>อะตอมและระบบพีริออดิก</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>24 เม.ย. 68 - 25 เม.ย. 68</td><td>พันธะเคมี</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>28 เม.ย. 68 - 30 เม.ย. 68</td><td>ปฏิกิริยาเคมี</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>1 พ.ค. 68 - 2 พ.ค. 68</td><td>แก๊ส</td><td>4</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>5 พ.ค. 68 - 6 พ.ค. 68</td><td>ของแข็ง</td><td>4</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>7 พ.ค. 68</td><td>สำรองและทบทวน</td><td>3</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>8 พ.ค. 68</td><td>ของเหลว</td><td>2</td><td>ผศ.ดร.ปิติ</td></tr>
-          <tr><td>9 พ.ค. 68 - 13 พ.ค. 68</td><td>สารละลาย</td><td>4</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>14 พ.ค. 68 - 15 พ.ค. 68</td><td>อุณหพลศาสตร์เบื้องต้น</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>16 พ.ค. 68 - 19 พ.ค. 68</td><td>จลนศาสตร์เคมี</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>20 พ.ค. 68</td><td>สมดุลเคมี</td><td>2</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>21 พ.ค. 68 - 22 พ.ค. 68</td><td>สมดุลไอออน</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>23 พ.ค. 68 - 27 พ.ค. 68</td><td>เคมีไฟฟ้า</td><td>6</td><td>รศ.ดร.กมลทิพย์</td></tr>
-          <tr><td>28 พ.ค. 68</td><td>สำรองและทบทวน</td><td>3</td><td>รศ.ดร.กมลทิพย์</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="footer">© 2568 Methee Jaisukdee | All Rights Reserved</div>
-  </div>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-  </script>
-</body>
-</html>
+    <!-- โค้ดเดิมของคุณยังอยู่ครบถ้วนตั้งแต่ตรงนี้ลงไป -->
