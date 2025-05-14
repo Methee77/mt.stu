@@ -243,15 +243,36 @@
     table {
       border-collapse: collapse;
       width: 100%;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
     }
-    th, td {
+
+    thead {
+      background-color: #03a96b;
+      color: white;
+    }
+
+    td, th {
       border: 1px solid #ccc;
       padding: 8px;
       text-align: left;
     }
-    thead {
-      background-color: #03a96b;
+
+    body.dark-mode table {
+      background-color: #1e1e1e;
       color: white;
+    }
+
+    body.dark-mode thead {
+      background-color: #418fa0;
+      color: white;
+    }
+
+    body.dark-mode td,
+    body.dark-mode th {
+      border: 1px solid #555;
     }
   </style>
 </head>
@@ -293,47 +314,48 @@
           <div style="font-weight: bold;">เคมีทั่วไป</div>
           <div style="font-size: 14px;">General Chemistry</div>
         </div>
-        <div class="grade">-</div>
+        <div class="grade">A</div>
       </div>
     </div>
 
     <div class="course-section">
-  <div class="term-header">
-    <span class="term-label">ตารางการจัดการเรียนรู้</span>
-    <div class="term-summary">เรียน จันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
+      <div class="term-header">
+        <span class="term-label">ตารางการจัดการเรียนรู้</span>
+        <div class="term-summary">เรียน จันทร์ - ศุกร์ เวลา 09.00 - 12.00 น. ห้อง ศร3-303</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>วันที่เรียน</th>
+            <th>เนื้อหา</th>
+            <th>จำนวนชั่วโมง</th>
+            <th>ผู้สอน</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>21 เม.ย. 68</td><td>แนะนำรายวิชา บทนำ</td><td>2</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>22 เม.ย. 68 - 23 เม.ย. 68</td><td>อะตอมและระบบพีริออดิก</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
+          <tr><td>24 เม.ย. 68 - 25 เม.ย. 68</td><td>พันธะเคมี</td><td>6</td><td>ผศ.ดร.ปิติ</td></tr>
+          <!-- แถวว่าง -->
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">© 2568 Methee Jaisukdee | All Rights Reserved</div>
   </div>
-
-  <table style="width: 100%; border-collapse: collapse; background-color: white; border-radius: 12px; overflow: hidden;">
-    <thead style="background-color: #03a96b; color: white;">
-      <tr>
-        <th style="padding: 10px; border: 1px solid #ccc;">วันที่เรียน</th>
-        <th style="padding: 10px; border: 1px solid #ccc;">เนื้อหา</th>
-        <th style="padding: 10px; border: 1px solid #ccc;">จำนวนชั่วโมง</th>
-        <th style="padding: 10px; border: 1px solid #ccc;">ผู้สอน</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- สร้าง 15 แถวว่าง -->
-      <tr><td style="padding: 8px; border: 1px solid #ccc;">21 เม.ย. 68</td><td style="padding: 8px; border: 1px solid #ccc;">แนะนำรายวิชา บทนำ</td><td style="padding: 8px; border: 1px solid #ccc;">2</td><td style="padding: 8px; border: 1px solid #ccc;">ผศ.ดร.ปิติ</td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;">22 เม.ย. 68 - 23 เม.ย. 68</td><td style="padding: 8px; border: 1px solid #ccc;">อะตอมและระบบพีริออดิก</td><td style="padding: 8px; border: 1px solid #ccc;">6</td><td style="padding: 8px; border: 1px solid #ccc;">ผศ.ดร.ปิติ</td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;">24 เม.ย. 68 - 25 เม.ย. 68</td><td style="padding: 8px; border: 1px solid #ccc;">พันธะเคมี</td><td style="padding: 8px; border: 1px solid #ccc;">6</td><td style="padding: 8px; border: 1px solid #ccc;">ผศ.ดร.ปิติ</td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-      <tr><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td><td style="padding: 8px; border: 1px solid #ccc;"></td></tr>
-    </tbody>
-  </table>
-</div>
-
-  <div class="footer">© 2568 Methee Jaisukdee | All Rights Reserved</div>
 
   <script>
     function toggleMode() {
