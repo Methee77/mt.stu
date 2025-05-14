@@ -287,10 +287,6 @@
       <p class="update-text">updated 12 พฤษภาคม 2568</p>
     </div>
 
-    <div class="countdown-box">
-      เหลือเวลาอีก: <span id="countdown">กำลังโหลด...</span> ก่อนสอบปลายภาค 01403111-60
-    </div>
-
     <div class="summary-boxes">
       <div class="summary-box">
         <div class="summary-title">หน่วยกิตสะสม</div>
@@ -361,27 +357,6 @@
       document.body.classList.toggle('dark-mode');
     }
 
-    function updateCountdown() {
-      const countdownElement = document.getElementById("countdown");
-      const examDate = new Date("2025-05-30T09:00:00");
-      const now = new Date();
-      const diff = examDate - now;
-
-      if (diff <= 0) {
-        countdownElement.innerText = "ถึงเวลาเข้าสอบแล้ว!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdownElement.innerText = ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
   </script>
 </body>
 </html>
